@@ -1,51 +1,43 @@
 export default function Home() {
   return (
-    <main style={{ backgroundColor: "#f5f1ea", color: "#1f1f1f" }}>
+    <main className="min-h-screen bg-[#f5f1ea] text-[#3b2f2f] scroll-smooth">
 
-  <section style={{
-    height: "90vh",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    padding: "20px"
-  }}>
-    
-    <h1 style={{
-      fontSize: "3rem",
-      marginBottom: "20px",
-      letterSpacing: "2px"
-    }}>
-      WOOD & METAL TREE
-    </h1>
+      {/* HERO */}
+      <section className="h-[90vh] flex flex-col justify-center items-center text-center px-6">
+        <h1 className="text-5xl tracking-widest mb-6 font-semibold">
+          WOOD & METAL TREE
+        </h1>
 
-    <p style={{
-      fontSize: "1.2rem",
-      maxWidth: "600px",
-      marginBottom: "30px",
-      lineHeight: "1.6"
-    }}>
-      Diseñamos muebles interiores que transforman tu espacio.
-      Calidad en madera, detalles en metal y acabados que hablan por sí solos.
-    </p>
+        <div className="w-24 h-[2px] bg-[#8b5e3c] mb-6"></div>
 
-    <a
-      href="#galeria"
-      style={{
-        backgroundColor: "#8b5e3c",
-        color: "white",
-        padding: "12px 30px",
-        borderRadius: "30px",
-        textDecoration: "none",
-        fontWeight: "bold"
-      }}
-    >
-      Ver trabajos
-    </a>
+        <p className="max-w-xl text-lg mb-8 leading-relaxed">
+          Diseñamos muebles interiores que transforman tu espacio.
+          Calidad en madera, detalles en metal y acabados que hablan por sí solos.
+        </p>
 
-  </section>
+        <a
+          href="#galeria"
+          className="bg-[#8b5e3c] text-white px-8 py-3 rounded-full font-semibold hover:opacity-80 transition"
+        >
+          Ver trabajos
+        </a>
+      </section>
 
-</main>
-)
+      {/* GALERÍA */}
+      <section id="galeria" className="py-32 px-6 bg-white text-center min-h-screen">
+        <h2 className="text-3xl font-semibold mb-10">
+          Nuestros Trabajos
+        </h2>
+
+        <div className="max-w-4xl mx-auto">
+          <img
+            src="/imagenes/puertacorrediza.jpeg"
+            alt="Puerta corrediza"
+            className="rounded-xl shadow-lg mx-auto"
+          />
+        </div>
+      </section>
+
+    </main>
+  )
 }
