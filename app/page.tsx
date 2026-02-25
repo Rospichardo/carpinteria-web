@@ -5,7 +5,7 @@ export default function Home() {
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-[#f5f1ea]/80 backdrop-blur-md z-50">
         <h2 className="text-xl font-semibold tracking-wide">
-          Carpintería Ros
+          Wood & Metal Tree
         </h2>
         <div className="flex gap-8 text-sm">
           <a href="#galeria" className="hover:text-[#6b4f4f] transition">
@@ -21,7 +21,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center text-center px-6 pt-40 pb-32">
 
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
-          Carpintería Ros
+          Wood & Metal Tree
         </h1>
 
         <p className="mt-6 text-lg max-w-xl text-[#6b4f4f]">
