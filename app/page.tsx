@@ -162,6 +162,31 @@ export default function Home() {
   </div>
 )}
 
+<a
+  href="https://wa.me/5216242198270"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    position: "fixed",
+    bottom: "25px",
+    right: "25px",
+    backgroundColor: "#25D366",
+    color: "white",
+    borderRadius: "50%",
+    width: "60px",
+    height: "60px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "28px",
+    textDecoration: "none",
+    boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
+    zIndex: 1000
+  }}
+>
+  💬
+</a>
+
     </main>
   );
 } 
