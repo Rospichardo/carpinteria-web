@@ -1,5 +1,11 @@
 export default function Home() {
   return (
+    <>
+      <style jsx global>{`
+        .zoom-image:hover {
+          transform: scale(1.05);
+        }
+      `}</style>
     <main
       style={{
         backgroundColor: "#f5f1ea",
@@ -93,64 +99,60 @@ export default function Home() {
       margin: "0 auto"
     }}
   >
-    <img
-      src="/imagenes/puertacorrediza.jpeg"
-      alt="Puerta corrediza"
-      style={{
-  width: "100%",
-  borderRadius: "15px",
-  boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-  transition: "transform 0.4s ease",
-  cursor: "pointer"
-}}
-onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
-      
-    />
+   <img
+  src="/imagenes/puertacorrediza.jpeg"
+  alt="Puerta corrediza"
+  className="zoom-image"
+  style={{
+    width: "100%",
+    borderRadius: "15px",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+    transition: "transform 0.4s ease",
+    cursor: "pointer"
+  }}
+/>
 
     <img
-      src="/imagenes/puertacorrediza.jpeg"
-      alt="Closet moderno"
-      style={{
-  width: "100%",
-  borderRadius: "15px",
-  boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-  transition: "transform 0.4s ease",
-  cursor: "pointer"
-}}
-onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
-    />
+  src="/imagenes/puertacorrediza.jpeg"
+  alt="Puerta corrediza"
+  className="zoom-image"
+  style={{
+    width: "100%",
+    borderRadius: "15px",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+    transition: "transform 0.4s ease",
+    cursor: "pointer"
+  }}
+/>
 
     <img
-      src="/imagenes/puertacorrediza.jpeg"
-      alt="Cocina integral"
-      style={{
-  width: "100%",
-  borderRadius: "15px",
-  boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-  transition: "transform 0.4s ease",
-  cursor: "pointer"
-}}
-onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
-    />
+  src="/imagenes/puertacorrediza.jpeg"
+  alt="Puerta corrediza"
+  className="zoom-image"
+  style={{
+    width: "100%",
+    borderRadius: "15px",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+    transition: "transform 0.4s ease",
+    cursor: "pointer"
+  }}
+/>
 
     <img
-      src="/imagenes/puertacorrediza.jpeg"
-      alt="Mesa con herrería"
-      style={{
-  width: "100%",
-  borderRadius: "15px",
-  boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-  transition: "transform 0.4s ease",
-  cursor: "pointer"
-}}
-onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
-    />
+  src="/imagenes/puertacorrediza.jpeg"
+  alt="Puerta corrediza"
+  className="zoom-image"
+  style={{
+    width: "100%",
+    borderRadius: "15px",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+    transition: "transform 0.4s ease",
+    cursor: "pointer"
+  }}
+/>
   </div>
 </section>
     </main>
+    </>    
   )
 }
