@@ -75,117 +75,58 @@ export default function Home() {
     minHeight: "100vh"
   }}
 >
-  <h2
-    style={{
-      fontSize: "2rem",
-      marginBottom: "60px"
-    }}
-  >
+  <h2 style={{ fontSize: "2rem", marginBottom: "60px" }}>
     Nuestros Trabajos
   </h2>
 
   <div
     style={{
-      
-    backgroundColor: "white",
-    borderRadius: "18px",
-    padding: "20px",
-    boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
-    transition: "transform 0.3s ease"
-      }}
-      className="card-hover"
-  > 
-   <img
-  src="/imagenes/puertacorrediza.jpeg"
-  alt="Puerta corrediza"
-  className="zoom-image"
-  style={{
-    width: "100%",
-    borderRadius: "12px",
-    marginBottom: "15px",
-    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-    transition: "transform 0.4s ease",
-    cursor: "pointer"
-  }}
-/>
- <h3 style={{ fontSize: "1.1rem", marginBottom: "5px" }}>
-    Puerta Corrediza
-  </h3>
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: "30px",
+      maxWidth: "1100px",
+      margin: "0 auto"
+    }}
+  >
 
-  <p style={{ color: "#777", fontSize: "0.9rem" }}>
-    Muebles Interiores
-  </p>
-</div>
+    {[1,2,3,4].map((item) => (
+      <div
+        key={item}
+        className="card-hover"
+        style={{
+          backgroundColor: "white",
+          borderRadius: "18px",
+          padding: "20px",
+          boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+          transition: "transform 0.3s ease"
+        }}
+      >
+        <img
+          src="/imagenes/puertacorrediza.jpeg"
+          alt="Puerta corrediza"
+          className="zoom-image"
+          style={{
+            width: "100%",
+            height: "400px",
+            objectFit: "cover",
+            borderRadius: "12px",
+            marginBottom: "15px"
+          }}
+        />
 
-<div>
-   <img
-  src="/imagenes/puertacorrediza.jpeg"
-  alt="Puerta corrediza"
-  className="zoom-image"
-  style={{
-    width: "100%",
-    borderRadius: "12px",
-    marginBottom: "15px",
-    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-    transition: "transform 0.4s ease",
-    cursor: "pointer"
-  }}
-/>
- <h3 style={{ fontSize: "1.1rem", marginBottom: "5px" }}>
-    Puerta Corrediza
-  </h3>
+        <h3 style={{ fontSize: "1.1rem", marginBottom: "5px" }}>
+          Puerta Corrediza
+        </h3>
 
-  <p style={{ color: "#777", fontSize: "0.9rem" }}>
-    Muebles Interiores
-  </p>
-</div>
+        <p style={{ color: "#777", fontSize: "0.9rem" }}>
+          Muebles Interiores
+        </p>
+      </div>
+    ))}
 
-<div>
-    <img
-  src="/imagenes/puertacorrediza.jpeg"
-  alt="Puerta corrediza"
-  className="zoom-image"
-  style={{
-    width: "100%",
-    borderRadius: "12px",
-    marginBottom: "15px",
-    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-    transition: "transform 0.4s ease",
-    cursor: "pointer"
-  }}
-/>
- <h3 style={{ fontSize: "1.1rem", marginBottom: "5px" }}>
-    Puerta Corrediza
-  </h3>
-
-  <p style={{ color: "#777", fontSize: "0.9rem" }}>
-    Muebles Interiores
-  </p>
-</div>
-
-<div>
-    <img
-  src="/imagenes/puertacorrediza.jpeg"
-  alt="Puerta corrediza"
-  className="zoom-image"
-  style={{
-    width: "100%",
-    borderRadius: "12px",
-    marginBottom: "15px",
-    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-    transition: "transform 0.4s ease",
-    cursor: "pointer"
-  }}
-/>
- <h3 style={{ fontSize: "1.1rem", marginBottom: "5px" }}>
-    Puerta Corrediza
-  </h3>
-
-  <p style={{ color: "#777", fontSize: "0.9rem" }}>
-    Muebles Interiores
-  </p>
-</div>
+  </div>
 </section>
+
     </main>
-  )
-}
+  );
+} 
