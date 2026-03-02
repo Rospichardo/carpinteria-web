@@ -68,7 +68,7 @@ export default function Home() {
           </p>
 
           <a
-            href="https://wa.me/5216241234567"
+            href="https://wa.me/5216242198270"
             target="_blank"
             rel="noopener noreferrer"
             style={{
