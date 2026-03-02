@@ -115,7 +115,7 @@ export default function Home() {
             height: "400px",
             objectFit: "cover",
             borderRadius: "12px",
-            marginBottom: "15px"
+            marginBottom: "15px",
             cursor: "pointer"
           }}
         />
@@ -131,7 +131,7 @@ export default function Home() {
     ))}
 
   </div>
-  
+
 </section>
 
 {selectedImage && (
