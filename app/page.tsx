@@ -65,38 +65,75 @@ export default function Home() {
         </a>
       </section>
 
-      {/* GALERÍA */}
-      <section
-        id="galeria"
-        style={{
-          padding: "120px 20px",
-          backgroundColor: "white",
-          textAlign: "center",
-          minHeight: "100vh"
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "2rem",
-            marginBottom: "40px"
-          }}
-        >
-          Nuestros Trabajos
-        </h2>
+    {/* GALERÍA */}
+<section
+  id="galeria"
+  style={{
+    padding: "120px 20px",
+    backgroundColor: "white",
+    textAlign: "center",
+    minHeight: "100vh"
+  }}
+>
+  <h2
+    style={{
+      fontSize: "2rem",
+      marginBottom: "60px"
+    }}
+  >
+    Nuestros Trabajos
+  </h2>
 
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <img
-            src="/imagenes/puertacorrediza.jpeg"
-            alt="Puerta corrediza"
-            style={{
-              width: "100%",
-              borderRadius: "15px",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.15)"
-            }}
-          />
-        </div>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: "30px",
+      maxWidth: "1100px",
+      margin: "0 auto"
+    }}
+  >
+    <img
+      src="/imagenes/puertacorrediza.jpeg"
+      alt="Puerta corrediza"
+      style={{
+        width: "100%",
+        borderRadius: "15px",
+        boxShadow: "0 10px 25px rgba(0,0,0,0.1)"
+      }}
+    />
 
-      </section>
+    <img
+      src="/imagenes/puertacorrediza.jpeg"
+      alt="Closet moderno"
+      style={{
+        width: "100%",
+        borderRadius: "15px",
+        boxShadow: "0 10px 25px rgba(0,0,0,0.1)"
+      }}
+    />
+
+    <img
+      src="/imagenes/puertacorrediza.jpeg"
+      alt="Cocina integral"
+      style={{
+        width: "100%",
+        borderRadius: "15px",
+        boxShadow: "0 10px 25px rgba(0,0,0,0.1)"
+      }}
+    />
+
+    <img
+      src="/imagenes/puertacorrediza.jpeg"
+      alt="Mesa con herrería"
+      style={{
+        width: "100%",
+        borderRadius: "15px",
+        boxShadow: "0 10px 25px rgba(0,0,0,0.1)"
+      }}
+    />
+  </div>
+</section>
     </main>
   )
 }
