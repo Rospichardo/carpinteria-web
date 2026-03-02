@@ -1,4 +1,8 @@
+"use client"
+import { useState } from "react"
+
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
   return (
     <main
       style={{
@@ -105,12 +109,14 @@ export default function Home() {
           src="/imagenes/puertacorrediza.jpeg"
           alt="Puerta corrediza"
           className="zoom-image"
+          onClick={() => setSelectedImage("/imagenes/puertacorrediza.jpeg")}
           style={{
             width: "100%",
             height: "400px",
             objectFit: "cover",
             borderRadius: "12px",
             marginBottom: "15px"
+            cursor: "pointer"
           }}
         />
 
@@ -125,7 +131,36 @@ export default function Home() {
     ))}
 
   </div>
+  
 </section>
+
+{selectedImage && (
+  <div
+    onClick={() => setSelectedImage(null)}
+    style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      height: "100vh",
+      backgroundColor: "rgba(0,0,0,0.8)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: 1000
+    }}
+  >
+    <img
+      src={selectedImage}
+      alt="Imagen ampliada"
+      style={{
+        maxWidth: "90%",
+        maxHeight: "90%",
+        borderRadius: "15px"
+      }}
+    />
+  </div>
+)}
 
     </main>
   );
