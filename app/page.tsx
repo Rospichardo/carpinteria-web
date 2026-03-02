@@ -1,11 +1,5 @@
 export default function Home() {
   return (
-    <>
-      <style jsx global>{`
-        .zoom-image:hover {
-          transform: scale(1.05);
-        }
-      `}</style>
     <main
       style={{
         backgroundColor: "#f5f1ea",
@@ -153,6 +147,5 @@ export default function Home() {
   </div>
 </section>
     </main>
-    </>    
   )
 }
