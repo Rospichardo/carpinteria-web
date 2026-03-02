@@ -86,27 +86,52 @@ export default function Home() {
 
   <div
     style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-      gap: "30px",
-      maxWidth: "1100px",
-      margin: "0 auto"
-    }}
-  >
-    <div> 
+      
+    backgroundColor: "white",
+    borderRadius: "18px",
+    padding: "20px",
+    boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+    transition: "transform 0.3s ease"
+      }}
+      className="card-hover"
+  > 
    <img
   src="/imagenes/puertacorrediza.jpeg"
   alt="Puerta corrediza"
   className="zoom-image"
   style={{
     width: "100%",
-    borderRadius: "15px",
+    borderRadius: "12px",
+    marginBottom: "15px",
     boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
     transition: "transform 0.4s ease",
     cursor: "pointer"
   }}
 />
- <h3 style={{ marginTop: "15px", fontSize: "1.1rem" }}>
+ <h3 style={{ fontSize: "1.1rem", marginBottom: "5px" }}>
+    Puerta Corrediza
+  </h3>
+
+  <p style={{ color: "#777", fontSize: "0.9rem" }}>
+    Muebles Interiores
+  </p>
+</div>
+
+<div>
+   <img
+  src="/imagenes/puertacorrediza.jpeg"
+  alt="Puerta corrediza"
+  className="zoom-image"
+  style={{
+    width: "100%",
+    borderRadius: "12px",
+    marginBottom: "15px",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+    transition: "transform 0.4s ease",
+    cursor: "pointer"
+  }}
+/>
+ <h3 style={{ fontSize: "1.1rem", marginBottom: "5px" }}>
     Puerta Corrediza
   </h3>
 
@@ -122,13 +147,14 @@ export default function Home() {
   className="zoom-image"
   style={{
     width: "100%",
-    borderRadius: "15px",
+    borderRadius: "12px",
+    marginBottom: "15px",
     boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
     transition: "transform 0.4s ease",
     cursor: "pointer"
   }}
 />
- <h3 style={{ marginTop: "15px", fontSize: "1.1rem" }}>
+ <h3 style={{ fontSize: "1.1rem", marginBottom: "5px" }}>
     Puerta Corrediza
   </h3>
 
@@ -144,13 +170,14 @@ export default function Home() {
   className="zoom-image"
   style={{
     width: "100%",
-    borderRadius: "15px",
+    borderRadius: "12px",
+    marginBottom: "15px",
     boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
     transition: "transform 0.4s ease",
     cursor: "pointer"
   }}
 />
- <h3 style={{ marginTop: "15px", fontSize: "1.1rem" }}>
+ <h3 style={{ fontSize: "1.1rem", marginBottom: "5px" }}>
     Puerta Corrediza
   </h3>
 
@@ -158,30 +185,6 @@ export default function Home() {
     Muebles Interiores
   </p>
 </div>
-
-<div>
-    <img
-  src="/imagenes/puertacorrediza.jpeg"
-  alt="Puerta corrediza"
-  className="zoom-image"
-  style={{
-    width: "100%",
-    borderRadius: "15px",
-    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-    transition: "transform 0.4s ease",
-    cursor: "pointer"
-  }}
-/>
- <h3 style={{ marginTop: "15px", fontSize: "1.1rem" }}>
-    Puerta Corrediza
-  </h3>
-
-  <p style={{ color: "#777", fontSize: "0.9rem" }}>
-    Muebles Interiores
-  </p>
-</div>
-
-  </div>
 </section>
     </main>
   )

@@ -32,3 +32,6 @@ body {
 .zoom-image:hover {
   transform: scale(1.05);
 }
+.card-hover:hover {
+  transform: translateY(-8px);
+}
