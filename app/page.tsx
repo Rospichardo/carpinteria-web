@@ -93,6 +93,7 @@ export default function Home() {
       margin: "0 auto"
     }}
   >
+    <div> 
    <img
   src="/imagenes/puertacorrediza.jpeg"
   alt="Puerta corrediza"
@@ -105,7 +106,16 @@ export default function Home() {
     cursor: "pointer"
   }}
 />
+ <h3 style={{ marginTop: "15px", fontSize: "1.1rem" }}>
+    Puerta Corrediza
+  </h3>
 
+  <p style={{ color: "#777", fontSize: "0.9rem" }}>
+    Muebles Interiores
+  </p>
+</div>
+
+<div>
     <img
   src="/imagenes/puertacorrediza.jpeg"
   alt="Puerta corrediza"
@@ -118,7 +128,16 @@ export default function Home() {
     cursor: "pointer"
   }}
 />
+ <h3 style={{ marginTop: "15px", fontSize: "1.1rem" }}>
+    Puerta Corrediza
+  </h3>
 
+  <p style={{ color: "#777", fontSize: "0.9rem" }}>
+    Muebles Interiores
+  </p>
+</div>
+
+<div>
     <img
   src="/imagenes/puertacorrediza.jpeg"
   alt="Puerta corrediza"
@@ -131,7 +150,16 @@ export default function Home() {
     cursor: "pointer"
   }}
 />
+ <h3 style={{ marginTop: "15px", fontSize: "1.1rem" }}>
+    Puerta Corrediza
+  </h3>
 
+  <p style={{ color: "#777", fontSize: "0.9rem" }}>
+    Muebles Interiores
+  </p>
+</div>
+
+<div>
     <img
   src="/imagenes/puertacorrediza.jpeg"
   alt="Puerta corrediza"
@@ -144,6 +172,15 @@ export default function Home() {
     cursor: "pointer"
   }}
 />
+ <h3 style={{ marginTop: "15px", fontSize: "1.1rem" }}>
+    Puerta Corrediza
+  </h3>
+
+  <p style={{ color: "#777", fontSize: "0.9rem" }}>
+    Muebles Interiores
+  </p>
+</div>
+
   </div>
 </section>
     </main>
