@@ -124,39 +124,33 @@ export default function Home() {
             margin: "0 auto",
           }}
         >
-          {proyectos.map((proyecto, index) => (
-            <div
-              key={index}
-              style={{
-                backgroundColor: "white",
-                borderRadius: "18px",
-                padding: "20px",
-                boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
-              }}
-            >
-              <img
-                src={proyecto.imagen}
-                alt={proyecto.titulo}
-                onClick={() => setSelectedImage(proyecto.imagen)}
-                style={{
-                  width: "100%",
-                  height: "420px",
-                  objectFit: "cover",
-                  borderRadius: "12px",
-                  marginBottom: "20px",
-                  cursor: "pointer",
-                }}
-              />
+         {proyectos.map((proyecto, index) => (
+  <div
+    key={index}
+    className="bg-white rounded-2xl shadow-md overflow-hidden 
+               transition-all duration-300 
+               hover:shadow-2xl hover:-translate-y-2"
+  >
+    <div className="overflow-hidden">
+      <img
+        src={proyecto.imagen}
+        alt={proyecto.titulo}
+        className="w-full h-80 object-cover 
+                   transition-transform duration-500 
+                   hover:scale-110"
+      />
+    </div>
 
-              <h3 style={{ fontSize: "1.2rem", marginBottom: "5px" }}>
-                {proyecto.titulo}
-              </h3>
-
-              <p style={{ color: "#777", fontSize: "0.95rem" }}>
-                {proyecto.descripcion}
-              </p>
-            </div>
-          ))}
+    <div className="p-6 text-center">
+      <h3 className="text-xl font-semibold">
+        {proyecto.titulo}
+      </h3>
+      <p className="text-gray-500 mt-2">
+        {proyecto.descripcion}
+      </p>
+    </div>
+  </div>
+))}
         </div>
       </section>
 
