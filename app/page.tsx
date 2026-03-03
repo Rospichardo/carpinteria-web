@@ -18,70 +18,66 @@ export default function Home() {
   ]
 
   return (
-    <main
-      style={{
-        backgroundColor: "#f8f6f2",
-        color: "#1f1f1f",
-        minHeight: "100vh",
-        padding: "60px 20px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-        }}
-      >
-        <h1
-          style={{
-            textAlign: "center",
-            fontSize: "2.5rem",
-            marginBottom: "50px",
-          }}
-        >
-          Nuestros Trabajos
+    <main className="bg-[#f8f6f2] text-[#1f1f1f]">
+
+      {/* HERO / PARTE SUPERIOR */}
+      <section className="text-center py-20 px-6">
+        <h1 className="text-4xl font-bold mb-4">
+          Carpintería en San José del Cabo y Cabo San Lucas
         </h1>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Diseñamos y fabricamos muebles sobre medida con acabados de alta calidad.
+        </p>
+      </section>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "40px",
-            maxWidth: "1100px",
-            margin: "0 auto",
-          }}
-        >
+      {/* GALERÍA */}
+      <section id="galeria" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Nuestros Trabajos
+          </h2>
 
-          {proyectos.map((proyecto, index) => (
-  <div
-    key={index}
-    className="group bg-white rounded-2xl shadow-md overflow-hidden 
-               transition-all duration-300 
-               hover:shadow-2xl hover:-translate-y-2"
-  >
-    <div className="overflow-hidden">
-      <img
-        src={proyecto.imagen}
-        alt={proyecto.titulo}
-        className="w-full h-80 object-cover 
-                   transition-transform duration-500 
-                   group-hover:scale-110"
-      />
-    </div>
+          <div className="grid md:grid-cols-2 gap-10">
+            {proyectos.map((proyecto, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl shadow-md overflow-hidden 
+                           transition-all duration-300 
+                           hover:shadow-2xl hover:-translate-y-2"
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={proyecto.imagen}
+                    alt={proyecto.titulo}
+                    className="w-full h-80 object-cover 
+                               transition-transform duration-500 
+                               group-hover:scale-110"
+                  />
+                </div>
 
-    <div className="p-6 text-center">
-      <h3 className="text-xl font-semibold">
-        {proyecto.titulo}
-      </h3>
-      <p className="text-gray-500 mt-2">
-        {proyecto.descripcion}
-      </p>
-    </div>
-  </div>
-))}
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-semibold">
+                    {proyecto.titulo}
+                  </h3>
+                  <p className="text-gray-500 mt-2">
+                    {proyecto.descripcion}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* BOTÓN WHATSAPP */}
+      <a
+        href="https://wa.me/5216242198270"
+        target="_blank"
+        className="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-600 transition"
+      >
+        WhatsApp
+      </a>
+
     </main>
   )
-  
 }
