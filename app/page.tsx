@@ -91,7 +91,7 @@ export default function Home() {
     <img
   src={selectedImage}
   onClick={(e) => e.stopPropagation()}
-  className="max-w-3xl w-[90%] max-h-[85vh]
+  className="max-w-3xl w-[70%] max-h-[85vh]
              object-contain rounded-xl"
 />
   </div>
