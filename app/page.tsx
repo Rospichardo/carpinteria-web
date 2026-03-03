@@ -79,18 +79,22 @@ export default function Home() {
       >
         WhatsApp
       </a>
-      
+
 {selectedImage && (
   <div
     onClick={() => setSelectedImage(null)}
     className="fixed inset-0 bg-black bg-opacity-80 
                flex items-center justify-center 
-               z-50 p-6"
+               z-50 p-6 
+               animate-fadeIn"
   >
     <img
       src={selectedImage}
+      onClick={(e) => e.stopPropagation()}
       className="max-w-4xl w-full max-h-[90vh] 
-                 object-contain rounded-xl"
+                 object-contain rounded-xl 
+                 transform transition duration-300 
+                 scale-95 animate-zoomIn"
     />
   </div>
 )}
