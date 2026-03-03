@@ -83,19 +83,29 @@ export default function Home() {
       {/* MODAL DE IMAGEN */}   
       {selectedImage && (
   <div
-    onClick={() => setSelectedImage(null)}
     className="fixed inset-0 bg-black/80
                flex items-center justify-center
                z-[9999]"
   >
+    {/* BOTÓN X */}
+    <button
+      onClick={() => setSelectedImage(null)}
+      className="absolute top-6 right-6
+                 text-white text-3xl font-light
+                 hover:scale-110 transition"
+    >
+      ×
+    </button>
+
+    {/* IMAGEN */}
     <img
-  src={selectedImage}
-  onClick={(e) => e.stopPropagation()}
-  className="max-w-3xl w-[70%] max-h-[85vh]
-             object-contain rounded-xl"
-/>
+      src={selectedImage}
+      onClick={(e) => e.stopPropagation()}
+      className="max-w-3xl w-[90%] max-h-[85vh]
+                 object-contain rounded-xl"
+    />
   </div>
-)}  
+)} 
       </main>
   )
 }
