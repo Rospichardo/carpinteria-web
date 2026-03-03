@@ -46,13 +46,15 @@ export default function Home() {
                            hover:shadow-2xl hover:-translate-y-2"
               >
                 <div className="overflow-hidden">
-                  <img
-                    src={proyecto.imagen}
-                    alt={proyecto.titulo}
-                    className="w-full h-80 object-cover 
-                               transition-transform duration-500 
-                               group-hover:scale-110"
-                  />
+                <img
+  src={proyecto.imagen}
+  alt={proyecto.titulo}
+  onClick={() => setSelectedImage(proyecto.imagen)}
+  className="w-full h-80 object-cover cursor-pointer
+             transition-transform duration-500 
+             group-hover:scale-110"
+/>  
+                
                 </div>
 
                 <div className="p-6 text-center">
@@ -77,7 +79,21 @@ export default function Home() {
       >
         WhatsApp
       </a>
-
+      
+{selectedImage && (
+  <div
+    onClick={() => setSelectedImage(null)}
+    className="fixed inset-0 bg-black bg-opacity-80 
+               flex items-center justify-center 
+               z-50 p-6"
+  >
+    <img
+      src={selectedImage}
+      className="max-w-4xl w-full max-h-[90vh] 
+                 object-contain rounded-xl"
+    />
+  </div>
+)}
     </main>
   )
 }
