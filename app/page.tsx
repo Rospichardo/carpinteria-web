@@ -25,8 +25,8 @@ export default function Home() {
                     bg-gradient-to-b from-[#f8f6f2] to-[#e8e3d9]">
   
   <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-    Carpintería Premium en <br />
-    San José del Cabo
+    Carpintería en <br />
+    San José del Cabo y Cabo San Lucas
   </h1>
 
   <p className="text-gray-600 text-lg md:text-xl 
