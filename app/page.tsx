@@ -21,15 +21,30 @@ export default function Home() {
     <main className="bg-[#f8f6f2] text-[#1f1f1f]">
 
       {/* HERO / PARTE SUPERIOR */}
-      <section className="text-center py-20 px-6">
-        <h1 className="text-4xl font-bold mb-4">
-          Carpintería en San José del Cabo y Cabo San Lucas
-        </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Diseñamos y fabricamos muebles sobre medida con acabados de alta calidad.
-        </p>
-      </section>
+      <section className="relative text-center py-32 px-6 
+                    bg-gradient-to-b from-[#f8f6f2] to-[#e8e3d9]">
+  
+  <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+    Carpintería Premium en <br />
+    San José del Cabo
+  </h1>
 
+  <p className="text-gray-600 text-lg md:text-xl 
+                max-w-2xl mx-auto mb-10">
+    Diseñamos y fabricamos muebles sobre medida con acabados
+    de alta calidad y atención personalizada.
+  </p>
+
+  <a
+    href="#galeria"
+    className="inline-block bg-[#1f1f1f] text-white
+               px-8 py-4 rounded-full
+               hover:bg-black transition"
+  >
+    Ver nuestros trabajos
+  </a>
+
+</section>
       {/* GALERÍA */}
       <section id="galeria" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
