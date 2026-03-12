@@ -20,6 +20,29 @@ export default function Home() {
   return (
     <main className="bg-[#f8f6f2] text-[#1f1f1f]">
 
+<header className="w-full bg-white shadow-sm">
+  <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+
+    <div className="flex items-center gap-3">
+      <img
+        src="/imagenes/logo.png"
+        alt="Logo"
+        className="h-12"
+      />
+      <span className="font-semibold text-lg">
+        Carpintería
+      </span>
+    </div>
+
+    <nav className="flex gap-6 text-gray-700">
+      <a href="#inicio">Inicio</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
       {/* HERO / PARTE SUPERIOR */}
   <section
   style={{
@@ -144,5 +167,6 @@ export default function Home() {
   </div>
 )} 
       </main>
+      
   )
 }
