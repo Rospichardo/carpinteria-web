@@ -31,7 +31,7 @@ export default function Home() {
     textAlign: "center",
     padding: "20px",
 
-    backgroundImage: "url('/imagenes/logo.png')",
+    backgroundImage: "url('/imagenes/inicio.jpeg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     
