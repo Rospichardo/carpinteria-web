@@ -36,11 +36,11 @@ export default function Home() {
   {/* contenido */}
   <div className="relative z-10 px-6">
 
-    <h1 className="text-5xl md:text-6xl font-bold mb-6">
-      Carpintería a Medida
-      <br />
-      en San José del Cabo
-    </h1>
+    <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fadeUp">
+  Carpintería a Medida
+  <br />
+  en San José del Cabo
+</h1>
 
     <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
       Diseñamos y fabricamos muebles personalizados con acabados
