@@ -37,10 +37,9 @@ export default function Home() {
     
   }}
 >
-  
 
   {/* capa oscura */}
-  <div className="absolute inset-0 bg-black/50"></div>
+  <div className="absolute inset-0 bg-black/60"></div>
 
   {/* contenido */}
   <div className="relative z-10 px-6">
