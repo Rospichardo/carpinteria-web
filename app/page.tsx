@@ -21,28 +21,42 @@ export default function Home() {
     <main className="bg-[#f8f6f2] text-[#1f1f1f]">
 
       {/* HERO / PARTE SUPERIOR */}
-      <section className="relative text-center py-32 px-6 
-                    bg-gradient-to-b from-[#f8f6f2] to-[#e8e3d9]">
-  
-  <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-    Carpintería en <br />
-    San José del Cabo y Cabo San Lucas
-  </h1>
+      <section
+  className="relative h-[90vh] flex items-center justify-center text-center text-white"
+  style={{
+    backgroundImage: "url('/imagenes/cocinahero.jpeg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
 
-  <p className="text-gray-600 text-lg md:text-xl 
-                max-w-2xl mx-auto mb-10">
-    Diseñamos y fabricamos muebles sobre medida con acabados
-    de alta calidad y atención personalizada.
-  </p>
+  {/* capa oscura */}
+  <div className="absolute inset-0 bg-black/50"></div>
 
-  <a
-    href="#galeria"
-    className="inline-block bg-[#1f1f1f] text-white
-               px-8 py-4 rounded-full
-               hover:bg-black transition"
-  >
-    Ver nuestros trabajos
-  </a>
+  {/* contenido */}
+  <div className="relative z-10 px-6">
+
+    <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      Carpintería a Medida
+      <br />
+      en San José del Cabo
+    </h1>
+
+    <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+      Diseñamos y fabricamos muebles personalizados con acabados
+      de alta calidad para tu hogar o negocio.
+    </p>
+
+    <a
+      href="https://wa.me/5216242198270"
+      className="bg-green-500 hover:bg-green-600
+                 px-8 py-4 rounded-full
+                 text-lg font-semibold transition"
+    >
+      Cotizar por WhatsApp
+    </a>
+
+  </div>
 
 </section>
       {/* GALERÍA */}
