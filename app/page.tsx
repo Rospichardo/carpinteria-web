@@ -44,13 +44,13 @@ export default function Home() {
   {/* contenido */}
   <div className="relative z-10 px-6">
 
-  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
   Carpintería a Medida
   <br />
   en San José del Cabo
 </h1>
 
-    <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+<p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white">
       Diseñamos y fabricamos muebles personalizados con acabados
       de alta calidad para tu hogar o negocio.
     </p>
