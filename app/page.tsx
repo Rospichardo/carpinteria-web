@@ -21,14 +21,23 @@ export default function Home() {
     <main className="bg-[#f8f6f2] text-[#1f1f1f]">
 
       {/* HERO / PARTE SUPERIOR */}
-      <section
-  className="relative h-[90vh] flex items-center justify-center text-center text-white"
+  <section
   style={{
-    backgroundImage: "url('/imagenes/inicio.jpeg')",
+    height: "90vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    padding: "20px",
+
+    backgroundImage: "url('/imagenes/logo.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
+    
   }}
 >
+  
 
   {/* capa oscura */}
   <div className="absolute inset-0 bg-black/50"></div>
