@@ -44,11 +44,11 @@ export default function Home() {
 
     {/* BOTON */}
     <a
-      href="https://wa.me/526241234567"
+      href="https://wa.me/526242198270"
       target="_blank"
       className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
     >
-      WhatsApp
+      Cotizar proyecto
     </a>
 
   </div>
@@ -89,15 +89,6 @@ export default function Home() {
       Diseñamos y fabricamos muebles personalizados con acabados
       de alta calidad para tu hogar o negocio.
     </p>
-
-    <a
-      href="https://wa.me/5216242198270"
-      className="bg-green-500 hover:bg-green-600
-                 px-8 py-4 rounded-full
-                 text-lg font-semibold transition"
-    >
-      Cotizar por WhatsApp
-    </a>
 
   </div>
 
