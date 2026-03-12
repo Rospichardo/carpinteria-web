@@ -44,7 +44,7 @@ export default function Home() {
   {/* contenido */}
   <div className="relative z-10 px-6">
 
-    <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fadeUp">
+  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
   Carpintería a Medida
   <br />
   en San José del Cabo
