@@ -50,7 +50,7 @@ export default function Home() {
   en San José del Cabo
 </h1>
 
-<p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white">
+<p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white drop-shadow-lg">
       Diseñamos y fabricamos muebles personalizados con acabados
       de alta calidad para tu hogar o negocio.
     </p>
