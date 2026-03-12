@@ -18,30 +18,42 @@ export default function Home() {
   ]
 
   return (
-    <main className="bg-[#f8f6f2] text-[#1f1f1f]">
+ <main className="pt-20">
 
-<header className="w-full bg-white shadow-sm">
-  <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+<header className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+  <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
 
+    {/* LOGO */}
     <div className="flex items-center gap-3">
       <img
         src="/imagenes/logo.png"
-        alt="Logo"
-        className="h-12"
+        alt="Logo Carpintería"
+        className="h-12 w-auto"
       />
-      <span className="font-semibold text-lg">
+      <span className="font-semibold text-lg text-gray-800">
         Carpintería
       </span>
     </div>
 
-    <nav className="flex gap-6 text-gray-700">
-      <a href="#inicio">Inicio</a>
-      <a href="#trabajos">Trabajos</a>
-      <a href="#contacto">Contacto</a>
+    {/* MENU */}
+    <nav className="hidden md:flex gap-8 text-gray-700 font-medium">
+      <a href="#inicio" className="hover:text-green-600">Inicio</a>
+      <a href="#trabajos" className="hover:text-green-600">Trabajos</a>
+      <a href="#contacto" className="hover:text-green-600">Contacto</a>
     </nav>
+
+    {/* BOTON */}
+    <a
+      href="https://wa.me/526241234567"
+      target="_blank"
+      className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+    >
+      WhatsApp
+    </a>
 
   </div>
 </header>
+
 
       {/* HERO / PARTE SUPERIOR */}
   <section
