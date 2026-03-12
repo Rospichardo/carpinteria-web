@@ -24,7 +24,7 @@ export default function Home() {
       <section
   className="relative h-[90vh] flex items-center justify-center text-center text-white"
   style={{
-    backgroundImage: "url('/imagenes/cocinahero.jpeg')",
+    backgroundImage: "url('/imagenes/inicio.jpeg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
