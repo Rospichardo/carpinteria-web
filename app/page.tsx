@@ -24,6 +24,11 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null)
     imagenes: [
       "/imagenes/cocina1.jpeg",
       "/imagenes/cocina2.jpeg",
+      "/imagenes/cocina3.jpeg",
+      "/imagenes/cocina4.jpeg",
+      "/imagenes/cocina5.jpeg",  
+      "/imagenes/cocina6.jpeg",
+
     ],
   },
 ]
