@@ -249,11 +249,25 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null)
       ←
     </button>
 
-    {/* imagen */}
+   {/* imagen */}
+<img
+  src={proyectos[selectedProject].imagenes[selectedIndex]}
+  className="max-w-5xl w-full max-h-[90vh] object-contain rounded-xl"
+/>
+
+{/* miniaturas */}
+<div className="flex gap-3 mt-6">
+  {proyectos[selectedProject].imagenes.map((img, i) => (
     <img
-      src={proyectos[selectedProject].imagenes[selectedIndex]}
-      className="max-w-5xl w-full max-h-[90vh] object-contain rounded-xl"
+      key={i}
+      src={img}
+      onClick={() => setSelectedIndex(i)}
+      className={`w-20 h-20 object-cover cursor-pointer rounded-lg border-2 
+      ${selectedIndex === i ? "border-white" : "border-transparent"}`}
     />
+  ))}
+</div>
+    
 
     {/* flecha derecha */}
     <button
