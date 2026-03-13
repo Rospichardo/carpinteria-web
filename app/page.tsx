@@ -4,10 +4,24 @@ import { useState } from "react"
 
 export default function Home() {
 
+
+
 const [selectedProject, setSelectedProject] = useState<number | null>(null)
 const [selectedIndex, setSelectedIndex] = useState(0)
 const [selectedImage, setSelectedImage] = useState<string | null>(null)
+const [zoom, setZoom] = useState(1)
 
+const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+  e.preventDefault()
+
+  const zoomSpeed = 0.001
+  const newZoom = zoom - e.deltaY * zoomSpeed
+
+  // límites de zoom
+  if (newZoom >= 1 && newZoom <= 3) {
+    setZoom(newZoom)
+  }
+}
   const proyectos = [
   {
     titulo: "Puerta Corrediza",
@@ -250,11 +264,17 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null)
       ←
     </button>
 
-   {/* imagen */}
-<img
-  src={proyectos[selectedProject].imagenes[selectedIndex]}
-  className="max-w-5xl w-full max-h-[90vh] object-contain rounded-xl"
-/>
+   {/* imagen grande */}
+<div
+  onWheel={handleWheel}
+  className="overflow-hidden rounded-xl"
+>
+  <img
+    src={proyectos[selectedProject].imagenes[selectedIndex]}
+    style={{ transform: `scale(${zoom})` }}
+    className="max-w-6xl w-full max-h-[90vh] object-contain transition-transform duration-200"
+  />
+</div>
 
 {/* miniaturas */}
 <div className="flex gap-3 mt-6">
@@ -262,9 +282,10 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null)
     <img
       key={i}
       src={img}
-      onClick={() => setSelectedIndex(i)}
+      onClick={() => {setSelectedIndex(i); setZoom(1); }}
       className={`w-20 h-20 object-cover cursor-pointer rounded-lg border-2 
       ${selectedIndex === i ? "border-white" : "border-transparent"}`}
+    
     />
   ))}
 </div>
