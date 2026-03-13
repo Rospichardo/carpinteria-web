@@ -2,11 +2,11 @@
 
 import { useState } from "react"
 
+export default function Home() {
+
 const [selectedProject, setSelectedProject] = useState<number | null>(null)
 const [selectedIndex, setSelectedIndex] = useState(0)
-
-export default function Home() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const proyectos = [
   {
