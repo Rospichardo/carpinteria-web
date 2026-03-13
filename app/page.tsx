@@ -188,8 +188,8 @@ export default function Home() {
       <h3 className="text-xl font-semibold mb-4">Contacto</h3>
 
       <p className="text-gray-400">📍 San José del Cabo, Baja California Sur</p>
-      <p className="text-gray-400">📞 WhatsApp: +52 624 XXX XXXX</p>
-      <p className="text-gray-400">📧 correo@email.com</p>
+      <p className="text-gray-400">📞 WhatsApp: +52 624 219 8270</p>
+      <p className="text-gray-400">📧 mego9291@gmail.com</p>
     </div>
 
     {/* Servicios */}
