@@ -1,22 +1,31 @@
 "use client"
 import { useState } from "react"
 
+const [selectedProject, setSelectedProject] = useState<number | null>(null)
+const [selectedIndex, setSelectedIndex] = useState(0)
+
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const proyectos = [
-    {
-      imagen: "/imagenes/puertacorrediza.jpeg",
-      titulo: "Puerta Corrediza",
-      descripcion: "Fabricación e instalación personalizada",
-    },
-    {
-      imagen: "/imagenes/puertados.jpeg",
-      titulo: "Cocina Integral",
-      descripcion: "Diseño sobre medida",
-    },
-  ]
-
+  {
+    titulo: "Puerta Corrediza",
+    descripcion: "Fabricación e instalación personalizada",
+    imagenes: [
+      "/imagenes/puerta1.jpeg",
+      "/imagenes/puerta2.jpeg",
+      "/imagenes/puerta3.jpeg",
+    ],
+  },
+  {
+    titulo: "Cocina Integral",
+    descripcion: "Diseño sobre medida",
+    imagenes: [
+      "/imagenes/cocina1.jpeg",
+      "/imagenes/cocina2.jpeg",
+    ],
+  },
+]
   return (
  <main className="pt-20">
 
@@ -101,38 +110,35 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-10">
-            {proyectos.map((proyecto, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-2xl shadow-md overflow-hidden 
-                           transition-all duration-300 
-                           hover:shadow-2xl hover:-translate-y-2"
-              >
-                <div className="overflow-hidden">
-                <img
-  src={proyecto.imagen}
-  alt={proyecto.titulo}
-  onClick={() => setSelectedImage(proyecto.imagen)}
-  className="w-full h-80 object-cover cursor-pointer
-             transition-transform duration-500 
-             group-hover:scale-110"
-/>  
-                
-                </div>
+        {proyectos.map((proyecto, index) => (
+  <div
+    key={index}
+    className="group bg-white rounded-2xl shadow-md overflow-hidden
+               transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+  >
+    <div className="overflow-hidden">
+      <img
+        src={proyecto.imagenes[0]}
+        alt={proyecto.titulo}
+        onClick={() => {
+          setSelectedProject(index)
+          setSelectedIndex(0)
+        }}
+        className="w-full h-80 object-cover cursor-pointer
+                   transition-transform duration-500 group-hover:scale-110"
+      />
+    </div>
 
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-semibold">
-                    {proyecto.titulo}
-                  </h3>
-                  <p className="text-gray-500 mt-2">
-                    {proyecto.descripcion}
-                  </p>
-                </div>
-              </div>
-            ))}
+    <div className="p-6 text-center">
+      <h3 className="text-xl font-semibold">{proyecto.titulo}</h3>
+      <p className="text-gray-500 mt-2">{proyecto.descripcion}</p>
+    </div>
+  </div>
+))}
           </div>
         </div>
       </section>
+            
 
       {/* BOTÓN WHATSAPP */}
       <a
@@ -210,6 +216,53 @@ export default function Home() {
     © {new Date().getFullYear()} Carpintería. Todos los derechos reservados.
   </div>
 </footer>
+
+{selectedProject !== null && (
+  <div
+    className="fixed inset-0 bg-black bg-opacity-90 
+               flex items-center justify-center z-50"
+  >
+    {/* cerrar */}
+    <button
+      onClick={() => setSelectedProject(null)}
+      className="absolute top-6 right-6 text-white text-3xl"
+    >
+      ✕
+    </button>
+
+    {/* flecha izquierda */}
+    <button
+      onClick={() =>
+        setSelectedIndex(
+          (selectedIndex - 1 + proyectos[selectedProject].imagenes.length) %
+            proyectos[selectedProject].imagenes.length
+        )
+      }
+      className="absolute left-6 text-white text-4xl"
+    >
+      ←
+    </button>
+
+    {/* imagen */}
+    <img
+      src={proyectos[selectedProject].imagenes[selectedIndex]}
+      className="max-w-5xl w-full max-h-[90vh] object-contain rounded-xl"
+    />
+
+    {/* flecha derecha */}
+    <button
+      onClick={() =>
+        setSelectedIndex(
+          (selectedIndex + 1) %
+            proyectos[selectedProject].imagenes.length
+        )
+      }
+      className="absolute right-6 text-white text-4xl"
+    >
+      →
+    </button>
+  </div>
+)}
       </main>
       
   )
