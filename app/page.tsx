@@ -314,7 +314,8 @@ const handleTouchEnd = () => {
 
     {/* flecha izquierda */}
     <button 
-      onClick={() => {
+      onClick={(e) => {
+  e.stopPropagation()
   setSelectedIndex(
     (selectedIndex - 1 + proyectos[selectedProject].imagenes.length) %
       proyectos[selectedProject].imagenes.length
@@ -322,6 +323,7 @@ const handleTouchEnd = () => {
   setZoom(1)
   setPosition({ x: 0, y: 0 })
 }}
+  
       className="absolute left-6 text-white text-4xl"
     >
       ←
@@ -367,7 +369,8 @@ const handleTouchEnd = () => {
 
     {/* flecha derecha */}
     <button
-      onClick={() => {
+      onClick={(e) => {
+  e.stopPropagation()
   setSelectedIndex(
     (selectedIndex + 1) %
       proyectos[selectedProject].imagenes.length
