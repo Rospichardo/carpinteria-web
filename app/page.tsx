@@ -265,6 +265,7 @@ const handleMouseUp = () => {
 
 {selectedProject !== null && (
   <div
+    onClick={() => setSelectedProject(null)}
     className="fixed inset-0 bg-black bg-opacity-90 
                flex flex-col items-center justify-center 
                z-50"
@@ -292,6 +293,7 @@ const handleMouseUp = () => {
 
 {/* imagen grande */}
 <div
+  onClick={(e) => e.stopPropagation()}
   onWheel={handleWheel}
   onMouseDown={handleMouseDown}
   onMouseMove={handleMouseMove}
