@@ -13,6 +13,9 @@ const [selectedProject, setSelectedProject] = useState<number | null>(null)
 const [selectedIndex, setSelectedIndex] = useState(0)
 const [selectedImage, setSelectedImage] = useState<string | null>(null)
 const [zoom, setZoom] = useState(1)
+const [touchStart, setTouchStart] = useState(0)
+const [touchEnd, setTouchEnd] = useState(0)
+
 
 const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
   e.preventDefault()
@@ -44,6 +47,38 @@ const handleMouseMove = (e: React.MouseEvent) => {
 
 const handleMouseUp = () => {
   setIsDragging(false)
+}
+
+const handleTouchStart = (e: React.TouchEvent) => {
+  setTouchStart(e.targetTouches[0].clientX)
+}
+
+const handleTouchMove = (e: React.TouchEvent) => {
+  setTouchEnd(e.targetTouches[0].clientX)
+}
+
+const handleTouchEnd = () => {
+  if (!touchStart || !touchEnd) return
+
+  const distance = touchStart - touchEnd
+
+  const minSwipeDistance = 50
+
+  if (distance > minSwipeDistance) {
+    // siguiente imagen
+    setSelectedIndex(
+      (selectedIndex + 1) %
+        proyectos[selectedProject!].imagenes.length
+    )
+  }
+
+  if (distance < -minSwipeDistance) {
+    // imagen anterior
+    setSelectedIndex(
+      (selectedIndex - 1 + proyectos[selectedProject!].imagenes.length) %
+        proyectos[selectedProject!].imagenes.length
+    )
+  }
 }
 
   const proyectos = [
@@ -299,6 +334,9 @@ const handleMouseUp = () => {
   onMouseMove={handleMouseMove}
   onMouseUp={handleMouseUp}
   onMouseLeave={handleMouseUp}
+  onTouchStart={handleTouchStart}
+  onTouchMove={handleTouchMove}
+  onTouchEnd={handleTouchEnd}
   className="overflow-hidden rounded-xl cursor-grab active:cursor-grabbing"
 >
   <img
