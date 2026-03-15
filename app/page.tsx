@@ -358,7 +358,12 @@ const handleTouchEnd = () => {
     <img
       key={i}
       src={img}
-      onClick={() => {setSelectedIndex(i); setPosition({ x: 0, y: 0 }); setZoom(1); }}
+      onClick={(e) => {
+        e.stopPropagation()
+        setSelectedIndex(i)
+        setPosition({ x: 0, y: 0 })
+        setZoom(1)
+}}
       className={`w-20 h-20 object-cover cursor-pointer rounded-lg border-2 
       ${selectedIndex === i ? "border-white" : "border-transparent"}`}
     
