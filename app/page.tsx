@@ -297,15 +297,15 @@ const handleMouseUp = () => {
   onMouseMove={handleMouseMove}
   onMouseUp={handleMouseUp}
   onMouseLeave={handleMouseUp}
-  className="overflow-hidden rounded-xl cursor-grab"
+  className="overflow-hidden rounded-xl cursor-grab active:cursor-grabbing"
 >
   <img
-    src={proyectos[selectedProject].imagenes[selectedIndex]}
-    style={{
-      transform: `scale(${zoom}) translate(${position.x}px, ${position.y}px)`
-    }}
-    className="max-w-6xl w-full max-h-[90vh] object-contain transition-transform duration-200"
-  />
+  src={proyectos[selectedProject].imagenes[selectedIndex]}
+  style={{
+    transform: `translate(${position.x}px, ${position.y}px) scale(${zoom})`
+  }}
+  className="max-w-6xl w-full max-h-[90vh] object-contain transition-transform duration-200"
+/>
 </div>
 
 {/* miniaturas */}
