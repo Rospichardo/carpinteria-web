@@ -301,10 +301,11 @@ const handleMouseUp = () => {
 >
   <img
   src={proyectos[selectedProject].imagenes[selectedIndex]}
+  onDoubleClick={() => setZoom(zoom === 1 ? 2 : 1)}
   style={{
     transform: `translate(${position.x}px, ${position.y}px) scale(${zoom})`
   }}
-  className="max-w-6xl w-full max-h-[90vh] object-contain transition-transform duration-200"
+  className="max-w-6xl w-full max-h-[90vh] object-contain transition-all duration-300 scale-95 animate-[fadeIn_.3s_ease]"
 />
 </div>
 
