@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 
 export default function Home() {
 
@@ -58,29 +58,28 @@ const handleTouchMove = (e: React.TouchEvent) => {
 }
 
 const handleTouchEnd = () => {
+
+  if (zoom > 1) return
+
   if (!touchStart || !touchEnd) return
 
   const distance = touchStart - touchEnd
-
   const minSwipeDistance = 50
 
   if (distance > minSwipeDistance) {
-    // siguiente imagen
     setSelectedIndex(
       (selectedIndex + 1) %
-        proyectos[selectedProject!].imagenes.length
+      proyectos[selectedProject ?? 0].imagenes.length
     )
   }
 
   if (distance < -minSwipeDistance) {
-    // imagen anterior
     setSelectedIndex(
-      (selectedIndex - 1 + proyectos[selectedProject!].imagenes.length) %
-        proyectos[selectedProject!].imagenes.length
+      (selectedIndex - 1 + proyectos[selectedProject ?? 0].imagenes.length) %
+      proyectos[selectedProject ?? 0].imagenes.length
     )
   }
 }
-
   const proyectos = [
   {
     titulo: "Puerta Corrediza",
@@ -314,13 +313,15 @@ const handleTouchEnd = () => {
     </button>
 
     {/* flecha izquierda */}
-    <button
-      onClick={() =>
-        setSelectedIndex(
-          (selectedIndex - 1 + proyectos[selectedProject].imagenes.length) %
-            proyectos[selectedProject].imagenes.length
-        )
-      }
+    <button 
+      onClick={() => {
+  setSelectedIndex(
+    (selectedIndex - 1 + proyectos[selectedProject].imagenes.length) %
+      proyectos[selectedProject].imagenes.length
+  )
+  setZoom(1)
+  setPosition({ x: 0, y: 0 })
+}}
       className="absolute left-6 text-white text-4xl"
     >
       ←
@@ -366,12 +367,14 @@ const handleTouchEnd = () => {
 
     {/* flecha derecha */}
     <button
-      onClick={() =>
-        setSelectedIndex(
-          (selectedIndex + 1) %
-            proyectos[selectedProject].imagenes.length
-        )
-      }
+      onClick={() => {
+  setSelectedIndex(
+    (selectedIndex + 1) %
+      proyectos[selectedProject].imagenes.length
+  )
+  setZoom(1)
+  setPosition({ x: 0, y: 0 })
+}}
       className="absolute right-6 text-white text-4xl"
     >
       →
