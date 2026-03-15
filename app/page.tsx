@@ -5,6 +5,9 @@ import { useState } from "react"
 export default function Home() {
 
 
+const [position, setPosition] = useState({ x: 0, y: 0 })
+const [isDragging, setIsDragging] = useState(false)
+const [start, setStart] = useState({ x: 0, y: 0 })
 
 const [selectedProject, setSelectedProject] = useState<number | null>(null)
 const [selectedIndex, setSelectedIndex] = useState(0)
@@ -17,11 +20,32 @@ const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
   const zoomSpeed = 0.001
   const newZoom = zoom - e.deltaY * zoomSpeed
 
-  // límites de zoom
-  if (newZoom >= 1 && newZoom <= 3) {
+    if (newZoom >= 1 && newZoom <= 3) {
     setZoom(newZoom)
   }
+  }
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true)
+    setStart({
+      x: e.clientX - position.x,
+      y: e.clientY - position.y,
+    })
+  }
+
+const handleMouseMove = (e: React.MouseEvent) => {
+  if (!isDragging) return
+
+  setPosition({
+    x: e.clientX - start.x,
+    y: e.clientY - start.y,
+  })
 }
+
+const handleMouseUp = () => {
+  setIsDragging(false)
+}
+
   const proyectos = [
   {
     titulo: "Puerta Corrediza",
@@ -237,6 +261,8 @@ const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
   </div>
 </footer>
 
+{/*VISOR DE IMAGENES */}
+
 {selectedProject !== null && (
   <div
     className="fixed inset-0 bg-black bg-opacity-90 
@@ -264,14 +290,20 @@ const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
       ←
     </button>
 
-   {/* imagen grande */}
+{/* imagen grande */}
 <div
   onWheel={handleWheel}
-  className="overflow-hidden rounded-xl"
+  onMouseDown={handleMouseDown}
+  onMouseMove={handleMouseMove}
+  onMouseUp={handleMouseUp}
+  onMouseLeave={handleMouseUp}
+  className="overflow-hidden rounded-xl cursor-grab"
 >
   <img
     src={proyectos[selectedProject].imagenes[selectedIndex]}
-    style={{ transform: `scale(${zoom})` }}
+    style={{
+      transform: `scale(${zoom}) translate(${position.x}px, ${position.y}px)`
+    }}
     className="max-w-6xl w-full max-h-[90vh] object-contain transition-transform duration-200"
   />
 </div>
@@ -282,7 +314,7 @@ const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
     <img
       key={i}
       src={img}
-      onClick={() => {setSelectedIndex(i); setZoom(1); }}
+      onClick={() => {setSelectedIndex(i); setPosition({ x: 0, y: 0 }); setZoom(1); }}
       className={`w-20 h-20 object-cover cursor-pointer rounded-lg border-2 
       ${selectedIndex === i ? "border-white" : "border-transparent"}`}
     
