@@ -100,6 +100,7 @@ const handleTouchEnd = () => {
       "/imagenes/cocina4.jpeg",
       "/imagenes/cocina5.jpeg",  
       "/imagenes/cocina6.jpeg",
+      "/imagenes/cocina7.jpeg",
 
     ],
   },
