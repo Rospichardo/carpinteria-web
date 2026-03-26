@@ -29,12 +29,14 @@ const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
   }
 
   const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true)
-    setStart({
-      x: e.clientX - position.x,
-      y: e.clientY - position.y,
-    })
-  }
+  if (zoom === 1) return
+
+  setIsDragging(true)
+  setStart({
+    x: e.clientX - position.x,
+    y: e.clientY - position.y,
+  })
+}
 
 const handleMouseMove = (e: React.MouseEvent) => {
   if (!isDragging) return
@@ -345,15 +347,18 @@ const handleTouchEnd = () => {
   onClick={(e) => e.stopPropagation()}
   onWheel={handleWheel}
   onMouseDown={handleMouseDown}
-  onMouseMove={handleMouseMove}
+  onMouseMove={isDragging ? handleMouseMove : undefined}
   onMouseUp={handleMouseUp}
   onMouseLeave={handleMouseUp}
   onTouchStart={handleTouchStart}
   onTouchMove={handleTouchMove}
   onTouchEnd={handleTouchEnd}
-  className="overflow-hidden rounded-xl cursor-grab active:cursor-grabbing"
+ className={`overflow-hidden rounded-xl ${
+  isDragging ? "cursor-grabbing" : "cursor-grab"
+}`}
 >
   <img
+  draggable={false}
   src={proyectos[selectedProject].imagenes[selectedIndex]}
   onDoubleClick={() => setZoom(zoom === 1 ? 2 : 1)}
   style={{
@@ -361,6 +366,7 @@ const handleTouchEnd = () => {
   }}
   className="max-w-6xl w-full max-h-[90vh] object-contain transition-all duration-300 scale-95 animate-[fadeIn_.3s_ease]"
 />
+
 </div>
 
 {/* miniaturas */}
