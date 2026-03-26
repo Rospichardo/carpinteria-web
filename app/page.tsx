@@ -104,6 +104,16 @@ const handleTouchEnd = () => {
 
     ],
   },
+
+  {
+    titulo: "Lambril decorativo",
+    descripcion: "Instalación de lambril en sala de estar o comedor",
+    imagenes: [
+      "/imagenes/lambril1.jpeg",
+      "/imagenes/lambril2.jpeg",
+
+    ],
+  },
 ]
   return (
  <main className="pt-20">
