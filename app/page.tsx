@@ -96,14 +96,14 @@ const handleTouchEnd = () => {
     titulo: "Cocina Integral",
     descripcion: "Diseño sobre medida",
     imagenes: [
+      "/imagenes/cocina0.jpeg",
       "/imagenes/cocina1.jpeg",
       "/imagenes/cocina2.jpeg",
       "/imagenes/cocina3.jpeg",
       "/imagenes/cocina4.jpeg",
       "/imagenes/cocina5.jpeg",  
       "/imagenes/cocina6.jpeg",
-      "/imagenes/cocina7.jpeg",
-
+      
     ],
   },
 
