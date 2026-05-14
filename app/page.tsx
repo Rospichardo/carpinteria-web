@@ -156,7 +156,8 @@ const handleTouchEnd = () => {
 
 
       {/* HERO / PARTE SUPERIOR */}
-  <section
+  <section 
+  className="relative"
   style={{
     height: "90vh",
     display: "flex",
@@ -174,7 +175,7 @@ const handleTouchEnd = () => {
 >
 
   {/* capa oscura */}
-  <div className="absolute inset-0 bg-black/60"></div>
+  <div className="absolute inset-0 bg-black/30 md:bg-black/50"></div>
 
   {/* contenido */}
   <div className="relative z-10 px-6">
