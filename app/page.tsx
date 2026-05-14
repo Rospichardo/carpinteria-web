@@ -84,7 +84,7 @@ const handleTouchEnd = () => {
 }
   const proyectos = [
   {
-    titulo: "Puerta Corrediza",
+    titulo: "Puerta Abatible",
     descripcion: "Fabricación e instalación personalizada",
     imagenes: [
       "/imagenes/puerta1.jpeg",
@@ -222,8 +222,10 @@ const handleTouchEnd = () => {
     </div>
 
     <div className="p-6 text-center">
-      <h3 className="text-xl font-semibold">{proyecto.titulo}</h3>
-      <p className="text-gray-500 mt-2">{proyecto.descripcion}</p>
+      <h3 className="text-xl font-bold text-black">{proyecto.titulo}</h3>
+      <p className="text-gray-800 mt-2 font-medium">
+  {proyecto.descripcion}
+</p>
     </div>
   </div>
 ))}
