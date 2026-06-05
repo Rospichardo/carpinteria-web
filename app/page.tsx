@@ -194,6 +194,59 @@ const handleTouchEnd = () => {
   </div>
 
 </section>
+
+{/* SOBRE NOSOTROS */}
+<section className="py-20 px-6 bg-gray-50">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+    {/* Texto */}
+    <div>
+      <h2 className="text-4xl font-bold mb-6 text-gray-900">
+        Sobre Nosotros
+      </h2>
+
+      <p className="text-gray-700 text-lg mb-4">
+        Somos una carpintería especializada en la fabricación de muebles
+        personalizados, cocinas integrales, closets, puertas y proyectos
+        sobre medida para hogares y negocios en San José del Cabo y Cabo San Lucas BCS.
+      </p>
+
+      <p className="text-gray-700 text-lg mb-6">
+        Nuestro compromiso es ofrecer acabados de alta calidad,
+        materiales duraderos y atención personalizada para cada cliente, Nos adaptamos a tus necesidades
+        y estilo para crear espacios únicos y funcionales.
+
+      </p>
+
+      <div className="grid grid-cols-2 gap-6 mt-8">
+        <div>
+          <h3 className="text-3xl font-bold text-green-600">100%</h3>
+          <p className="text-gray-600">Trabajos personalizados</p>
+        </div>
+
+        <div>
+          <h3 className="text-3xl font-bold text-green-600">Calidad</h3>
+          <p className="text-gray-600">Materiales seleccionados</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Imagen */}
+    <div>
+      <img
+        src="/imagenes/sobre-nosotros.jpg"
+        alt="Trabajo de carpintería"
+        className="rounded-2xl shadow-xl w-full h-[450px] object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
       {/* GALERÍA */}
       <section id="galeria" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
