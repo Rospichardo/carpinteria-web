@@ -345,7 +345,7 @@ const handleTouchEnd = () => {
         </p>
 
         <p className="mb-4">
-          🚗 Servicio a domicilio para toma de medidas y presupuestos.
+          🚗 Servicio a domicilio para toma de medidas y cotizaciones sin compromiso.
         </p>
 
         <p className="mb-4">
