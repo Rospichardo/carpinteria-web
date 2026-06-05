@@ -234,7 +234,7 @@ const handleTouchEnd = () => {
     {/* Imagen */}
     <div>
       <img
-        src="/imagenes/sobre-nosotros.jpg"
+        src="/imagenes/sobre-nosotros.jpeg"
         alt="Trabajo de carpintería"
         className="rounded-2xl shadow-xl w-full h-[450px] object-cover"
       />
