@@ -328,15 +328,15 @@ const handleTouchEnd = () => {
 <section id="contacto" className="py-20 bg-gray-100">
   <div className="max-w-7xl mx-auto px-6">
 
-    <h2 className="text-4xl font-bold text-center mb-12">
-      Ubicación y Atención
-    </h2>
+<h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+  Ubicación y Atención
+</h2>
 
     <div className="grid md:grid-cols-2 gap-10">
 
       {/* Información */}
       <div className="bg-white p-8 rounded-2xl shadow-lg">
-        <h3 className="text-2xl font-semibold mb-6">
+        <h3 className="text-2xl font-bold mb-6 text-gray-900">
           Atención a Clientes
         </h3>
 
@@ -374,7 +374,7 @@ const handleTouchEnd = () => {
       {/* MAPA */}
       <div className="rounded-2xl overflow-hidden shadow-lg bg-white">
         <div className="h-[450px] flex items-center justify-center text-gray-500">
-          Aquí irá tu mapa de Google Maps
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.6369753712675!2d-109.73160019999999!3d23.110381399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86af5b1931db021f%3A0xe48dde591b634d!2sColima%2032%2C%20Vista%20Hermosa%2C%2023427%20San%20Jos%C3%A9%20del%20Cabo%2C%20B.C.S.!5e0!3m2!1ses-419!2smx!4v1780697079047!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
