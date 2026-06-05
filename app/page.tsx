@@ -329,6 +329,7 @@ const handleTouchEnd = () => {
   <div className="max-w-7xl mx-auto px-6">
 
 <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+  <h3 className="text-xl font-semibold mb-6 text-gray-900"></h3>
   Ubicación y Atención
 </h2>
 
@@ -340,19 +341,19 @@ const handleTouchEnd = () => {
           Atención a Clientes
         </h3>
 
-        <p className="mb-4">
+        <p className="text-gray-700">
           📍 San José del Cabo, Baja California Sur
         </p>
 
-        <p className="mb-4">
+        <p className="text-gray-700">
           🚗 Servicio a domicilio para toma de medidas y cotizaciones sin compromiso.
         </p>
 
-        <p className="mb-4">
+        <p className="text-gray-700">
           📞 WhatsApp: +52 624 219 8270
         </p>
 
-        <p className="mb-6">
+        <p className="text-gray-700">
           📧 mego9291@gmail.com
         </p>
 
