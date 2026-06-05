@@ -323,6 +323,69 @@ const handleTouchEnd = () => {
   </div>
 )} 
 
+
+{/* UBICACIÓN Y HORARIOS */}
+<section id="contacto" className="py-20 bg-gray-100">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <h2 className="text-4xl font-bold text-center mb-12">
+      Ubicación y Atención
+    </h2>
+
+    <div className="grid md:grid-cols-2 gap-10">
+
+      {/* Información */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg">
+        <h3 className="text-2xl font-semibold mb-6">
+          Atención a Clientes
+        </h3>
+
+        <p className="mb-4">
+          📍 San José del Cabo, Baja California Sur
+        </p>
+
+        <p className="mb-4">
+          🚗 Servicio a domicilio para toma de medidas y presupuestos.
+        </p>
+
+        <p className="mb-4">
+          📞 WhatsApp: +52 624 219 8270
+        </p>
+
+        <p className="mb-6">
+          📧 mego9291@gmail.com
+        </p>
+
+        <h4 className="font-semibold text-lg mb-3">
+          Horarios de atención
+        </h4>
+
+        <ul className="space-y-2 text-gray-700">
+          <li>Lunes: 8:00 AM - 6:00 PM</li>
+          <li>Martes: 8:00 AM - 6:00 PM</li>
+          <li>Miércoles: 8:00 AM - 6:00 PM</li>
+          <li>Jueves: 8:00 AM - 6:00 PM</li>
+          <li>Viernes: 8:00 AM - 6:00 PM</li>
+          <li>Sábado: 8:00 AM - 2:00 PM</li>
+          <li>Domingo: Cerrado</li>
+        </ul>
+      </div>
+
+      {/* MAPA */}
+      <div className="rounded-2xl overflow-hidden shadow-lg bg-white">
+        <div className="h-[450px] flex items-center justify-center text-gray-500">
+          Aquí irá tu mapa de Google Maps
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
 {/* FOOTER */}
 <footer className="bg-gray-900 text-white mt-20">
   <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
