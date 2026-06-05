@@ -358,8 +358,12 @@ const handleTouchEnd = () => {
         </p>
 
         <h4 className="font-semibold text-lg mb-3">
+          
+        <p className="text-gray-700">
           Horarios de atención
+            </p>
         </h4>
+      
 
         <ul className="space-y-2 text-gray-700">
           <li>Lunes: 8:00 AM - 6:00 PM</li>
